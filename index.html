@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Language School NYC | German with Julia</title>
+    <meta name="description" content="German with Julia – your trusted German language school in NYC. Private lessons, conversational coaching, exam prep, and business German tailored to your goals. Free intro session!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2C2C2C;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: #FAF7F2;
+        }
+
+        /* Header Styles */
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, #FAF7F2 0%, #FFFFFF 100%);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(30, 80, 160, 0.15);
+            z-index: 1000;
+            animation: slideDown 0.6s ease-out;
+            border-bottom: 2px solid #D4AF87;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(212, 175, 135, 0.4);
+            border: 3px solid #D4AF87;
+            object-fit: cover;
+        }
+
+        .brand-name {
+            color: #1E3A8A;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn-header {
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .btn-phone {
+            background: linear-gradient(135deg, #D4AF87 0%, #C9A961 100%);
+            color: #2C2C2C;
+            box-shadow: 0 4px 15px rgba(212, 175, 135, 0.4);
+        }
+
+        .btn-phone:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 135, 0.6);
+        }
+
+        .btn-website {
+            background: transparent;
+            color: #1E3A8A;
+            border: 2px solid #1E3A8A;
+        }
+
+        .btn-website:hover {
+            background: #1E3A8A;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E2D6B 50%, #111C50 100%);
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 135, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212, 175, 135, 0.1) 0%, transparent 50%);
+            animation: shimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #FAF7F2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero-subheading {
+            font-size: 1.5rem;
+            color: #D4AF87;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF87 0%, #C9A961 100%);
+            color: #2C2C2C;
+            box-shadow: 0 6px 25px rgba(212, 175, 135, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(212, 175, 135, 0.7);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #D4AF87;
+            border: 2px solid #D4AF87;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 135, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #1E3A8A;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #1E2D6B;
+            text-align: center;
+            margin-bottom: 4rem;
+            font-family: 'Arial', sans-serif;
+            font-weight: 300;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2C2C2C;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .about-text p { margin-bottom: 1.5rem; }
+
+        .about-text a {
+            color: #1E3A8A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .about-text a:hover { color: #D4AF87; }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF7F2 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(212, 175, 135, 0.2);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 45px rgba(30, 58, 138, 0.2);
+            border-color: #D4AF87;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            color: #1E3A8A;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #2C2C2C;
+            line-height: 1.7;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .service-card a {
+            color: #1E3A8A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .service-card a:hover { color: #D4AF87; }
+
+        /* Blog / Why Choose Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .blog-article {
+            background: #FFFFFF;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.1);
+            border-left: 4px solid #D4AF87;
+            transition: all 0.3s ease;
+        }
+
+        .blog-article:hover {
+            box-shadow: 0 12px 35px rgba(30, 58, 138, 0.2);
+            transform: translateX(5px);
+        }
+
+        .blog-article h3 {
+            font-size: 1.8rem;
+            color: #1E3A8A;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            font-size: 1rem;
+            color: #2C2C2C;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .blog-article a {
+            color: #1E3A8A;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .blog-article a:hover { color: #D4AF87; }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(212, 175, 135, 0.4);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1E3A8A;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.8rem;
+            color: #D4AF87;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after { transform: rotate(45deg); }
+
+        .faq-question:hover { background: rgba(30, 58, 138, 0.03); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 1.5rem 2rem;
+        }
+
+        .faq-answer p {
+            color: #2C2C2C;
+            line-height: 1.7;
+        }
+
+        /* Location Section */
+        .location-content {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(30, 58, 138, 0.2);
+            height: 500px;
+            width: 100%;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2C2C2C 0%, #1F1F1F 100%);
+            color: #FAF7F2;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(30, 58, 138, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 135, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-section { text-align: center; }
+
+        .footer-section h3 {
+            color: #D4AF87;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #FAF7F2;
+            text-decoration: none;
+            line-height: 2;
+            font-family: 'Arial', sans-serif;
+            display: block;
+            transition: all 0.3s ease;
+            margin: 0.5rem 0;
+        }
+
+        .footer-section a:hover { color: #D4AF87; }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 135, 0.3);
+            color: #D4AF87;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content,
+            .location-content {
+                grid-template-columns: 1fr;
+            }
+            .services-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero-subheading { font-size: 1.2rem; }
+            .section-title { font-size: 2rem; }
+            .header-content { flex-direction: column; text-align: center; }
+            .hero-cta { flex-direction: column; }
+            .about-images { grid-template-columns: 1fr; }
+        }
+
+        /* Scroll Animation */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SRDdmZBQ_2cr96tO4zUsKtywWTEORAVW066px1ZKX7mLCp3TIpeqi3PqDsTXHALYrXI1NeLVNJZKaRw3iWfRXALRclp7ntOki1iYPpEf3Vb7h_IrYBx-aWRs62XvXKFpSSO-8RN3TZNmHkJvOUl645vrqSWNsRCE8KDtzd02ZGZOIdPR5JY8bQdP5z-21ExjxDPuWtxvaCHIYdr2ZQMSjMwb-x71fIoGH0eVYg=w1280" alt="German with Julia Logo" class="logo">
+                <div class="brand-name">German with Julia</div>
+            </div>
+            <div class="header-buttons">
+                <a href="tel:252-340-7148" class="btn-header btn-phone">Call: 252-340-7148</a>
+                <a href="https://www.germanwithj.com/" target="_blank" class="btn-header btn-website">Visit Website</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Top Tips for Choosing the Right German Language School in NYC</h1>
+            <p class="hero-subheading">Your trusted German language school in New York City — personalized lessons, expert coaching, and a free introductory session to get you started.</p>
+            <div class="hero-cta">
+                
+                <a href="https://www.germanwithj.com/" target="_blank" class="btn-hero btn-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="animate-on-scroll">
+        <h2 class="section-title">About Our Personalized German Lessons</h2>
+        <p class="section-subtitle">With a Complimentary First Session — tailored to your goals from day one</p>
+        <div class="about-content">
+            <div class="about-text">
+                <p>At <a href="https://www.germanwithj.com/" target="_blank"><strong>German with Julia</strong></a>, I specialize in providing tailored German language instruction designed around your unique goals and learning style. Whether you're a complete beginner or looking to refine your advanced skills, every lesson is built specifically for you. My complimentary 30-minute introductory session allows us to assess your current level and establish clear language objectives.</p>
+
+                <p>As a leading <a href="https://www.google.com/maps?cid=5223662206070780355" target="_blank"><strong>German language school in NYC</strong></a>, I use a student-centered approach that structures lessons to enhance speaking skills through interactive exercises, engaging videos, and fun games. My self-created, minimalistic lesson plans emphasize real-life communication, fostering fluency through warm-up conversations, practical vocabulary, and continuous feedback.</p>
+
+                <p>By encouraging students to "think in German," I help develop natural speaking abilities from the very start. For ongoing learners, I transition to immersive lessons conducted entirely in German to deepen comprehension and conversational confidence. Whether you're preparing for a Goethe-Zertifikat exam, need Business German for your career, or simply want to communicate with confidence in daily life — I'm here to guide you every step of the way.</p>
+
+                <p>Let's make learning German an enjoyable and effective journey! As your go-to <a href="https://www.germanwithj.com/" target="_blank"><strong>German tutor in New York</strong></a>, I am committed to helping you reach fluency through engaging, goal-driven lessons that fit seamlessly into your busy schedule.</p>
+            </div>
+            <div class="about-images">
+                <img src="https://images.squarespace-cdn.com/content/v1/6747847fcea7a70535b3fc71/4b53e9c3-6eec-4d54-a427-31df32521d66/Grey+White+Modern+Book+Typography+Mindset+Youtube+Thumbnail.png" alt="German tutor teaching" class="about-image">
+                <img src="https://images.squarespace-cdn.com/content/v1/6747847fcea7a70535b3fc71/088e7262-a793-4fc4-a007-67c928a45982/Copy+of+youtube+banner.png.jpeg" alt="Student learning German" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="animate-on-scroll">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive German language programs for every goal, level, and lifestyle</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Private German Lessons</h3>
+                <p>My <a href="https://www.germanwithj.com/" target="_blank"><strong>private German lessons</strong></a> are fully customized to match your level, pace, and learning objectives. Whether you're starting from scratch or bridging gaps in your existing knowledge, each session is thoughtfully designed just for you. One-on-one attention ensures you progress faster and with greater confidence. Available both in-person in NYC and online.</p>
+            </div>
+            <div class="service-card">
+                <h3>Business German Tutoring</h3>
+                <p>My <a href="https://www.google.com/maps?cid=5223662206070780355" target="_blank"><strong>Business German tutoring</strong></a> is ideal for professionals who need to communicate effectively in German workplace settings. I focus on industry-specific vocabulary, formal writing, meeting language, and professional presentations. Lessons are structured around your field and real-world scenarios so you can apply skills immediately. Perfect for executives, entrepreneurs, and career-changers.</p>
+            </div>
+            <div class="service-card">
+                <h3>Conversational German Coaching</h3>
+                <p>My <a href="https://www.germanwithj.com/" target="_blank"><strong>conversational German coaching</strong></a> is designed for learners who want to speak with fluency and naturalness in everyday situations. Through warm-up discussions, role-plays, and real-life dialogues, you'll build genuine confidence in speaking. I emphasize thinking directly in German to eliminate the habit of translating in your head. Ideal for travelers, expats, and anyone preparing for life in a German-speaking country.</p>
+            </div>
+            <div class="service-card">
+                <h3>German Exam Preparation</h3>
+                <p>Preparing for the <a href="https://www.google.com/maps?cid=5223662206070780355" target="_blank"><strong>Goethe-Zertifikat or TestDaF</strong></a>? I offer targeted exam prep that covers all four language skills — reading, writing, listening, and speaking. My structured approach familiarizes you with exam formats, time management strategies, and the types of tasks you'll encounter. With focused practice and expert feedback, you'll walk into your exam with confidence.</p>
+            </div>
+            <div class="service-card">
+                <h3>German for Beginners</h3>
+                <p>Never studied German before? No problem! My <a href="https://www.germanwithj.com/" target="_blank"><strong>German for beginners</strong></a> program introduces you to the language gently and effectively. I use engaging visuals, practical phrases, and simple grammar explanations so you start communicating from day one. The lessons are fun, supportive, and designed to build a strong foundation quickly. You'll be surprised how much you can achieve in just a few sessions.</p>
+            </div>
+            <div class="service-card">
+                <h3>German for Daily Life</h3>
+                <p>My <a href="https://www.google.com/maps?cid=5223662206070780355" target="_blank"><strong>German for daily life</strong></a> lessons focus on the practical language skills you need for real situations — shopping, healthcare appointments, public transport, socializing, and more. Lessons are grounded in everyday vocabulary and natural expressions that Germans actually use. Whether you've just relocated or are planning a move to a German-speaking country, this program will give you the tools to navigate daily life with ease.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why-choose" class="animate-on-scroll">
+        <h2 class="section-title">Why Choose German with Julia?</h2>
+        <p class="section-subtitle">What sets my German language school apart from the rest in New York City</p>
+        <div class="blog-grid">
+            <article class="blog-article">
+                <h3>Fully Personalized Lessons</h3>
+                <p>Unlike large language schools or generic apps, every lesson at <a href="https://www.germanwithj.com/" target="_blank"><strong>German with Julia</strong></a> is crafted specifically for you. I take the time to understand your goals, schedule, and learning style before we begin. This ensures that every minute of our time together is focused on what matters most to you — whether that's exam prep, workplace German, or everyday conversation. There's no one-size-fits-all approach here.</p>
+            </article>
+            <article class="blog-article">
+                <h3>Immersive, Student-Centered Approach</h3>
+                <p>My teaching philosophy centers on the student. I use interactive exercises, videos, and games to keep you engaged and motivated. As you progress, lessons gradually shift to being conducted entirely in German — immersing you in the language naturally and building deep comprehension. This method, paired with warm-up conversations and continuous feedback, accelerates fluency in a way traditional textbooks simply can't match. As a trusted <a href="https://www.google.com/maps?cid=5223662206070780355" target="_blank"><strong>German tutor in New York</strong></a>, I've seen this approach transform students at every level.</p>
+            </article>
+            <article class="blog-article">
+                <h3>Free Introductory Session & Clear Goals</h3>
+                <p>I offer a complimentary 30-minute introductory session so we can get to know each other, assess your current German level, and set clear, achievable language objectives together. There's no pressure and no obligation — just a genuine conversation about where you are and where you want to go. This collaborative start ensures your lessons are purposeful and effective from the very first paid session onward. It's one of the reasons students consistently choose my <a href="https://www.germanwithj.com/" target="_blank"><strong>German language school in NYC</strong></a> over other options.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="animate-on-scroll">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about learning German with Julia</p>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What can I expect from my first session at German with Julia?</div>
+                <div class="faq-answer">
+                    <p>Your first session is a complimentary 30-minute introductory meeting where we'll assess your current German level and discuss your language goals. Whether you're a complete beginner or an advanced speaker looking to refine specific skills, this session helps us map out a clear, personalized learning path. There's no pressure — it's simply a chance for us to connect and ensure we're a great fit before your lessons begin.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer both in-person and online German lessons?</div>
+                <div class="faq-answer">
+                    <p>Yes! I offer both in-person German classes in NYC (including Manhattan, Brooklyn, and Queens) and online German lessons for students across New York and beyond. Online sessions are conducted via video call and are just as interactive and effective as face-to-face lessons. Whichever format suits your schedule and preferences, I'll ensure the learning experience is engaging and results-driven.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How quickly will I see progress in my German?</div>
+                <div class="faq-answer">
+                    <p>Progress depends on your starting level, goals, and consistency — but most students notice meaningful improvement within just a few weeks of regular lessons. Because every lesson is tailored specifically to you and built around real-life communication, you'll be applying new vocabulary and structures from day one. My immersive "think in German" approach also speeds up fluency significantly compared to traditional methods.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can you help me prepare for the Goethe-Zertifikat or TestDaF exam?</div>
+                <div class="faq-answer">
+                    <p>Absolutely. I offer dedicated German exam preparation courses for certifications including the Goethe-Zertifikat and TestDaF. My exam prep lessons cover all tested skills — reading, writing, listening, and speaking — with practice materials, timed exercises, and detailed feedback. I'll familiarize you with the exact exam format so you can walk in feeling prepared and confident on test day.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you teach Business German for professionals?</div>
+                <div class="faq-answer">
+                    <p>Yes, Business German is one of my most popular services. I work with professionals across a range of industries — from finance and law to tech and healthcare — who need to communicate effectively in German professional environments. Lessons are tailored to your specific field and may include formal email writing, negotiation language, presentation skills, and industry vocabulary. Whether you're working with German-speaking colleagues or clients, I'll help you communicate with clarity and professionalism.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="animate-on-scroll">
+        <h2 class="section-title">Find Us on Google</h2>
+        <div class="location-content">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.799767849446!2d-74.0045811!3d40.753174699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6250c5ad00bd3b87%3A0x487e2d19ab7b71c3!2sGerman%20with%20Julia!5e1!3m2!1sen!2s!4v1774625162798!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p><strong>German with Julia</strong></p>
+                <p>311 11th Ave, New York, NY 10001</p>
+                <p><a href="tel:252-340-7148">252-340-7148</a></p>
+                <p><a href="https://www.germanwithj.com/" target="_blank">www.germanwithj.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="https://www.germanwithj.com/">Private German Lessons</a>
+                <a href="https://www.germanwithj.com/">Business German Tutoring</a>
+                <a href="https://www.germanwithj.com/">Conversational German Coaching</a>
+                <a href="https://www.germanwithj.com/">German Exam Preparation</a>
+                <a href="https://www.germanwithj.com/">German for Beginners NYC</a>
+                <a href="https://www.germanwithj.com/">Online German Lessons NYC</a>
+            </div>
+            <div class="footer-section">
+                <h3>About German with Julia</h3>
+                <p>German with Julia is a personalized German language school in New York City offering private, group, and online lessons for all levels. With a student-centered teaching approach, a free introductory session, and programs ranging from Business German to Goethe-Zertifikat prep, Julia helps every student reach their language goals efficiently and enjoyably.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 German with Julia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+                document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+
+                if (!isActive) {
+                    answer.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Service Cards Stagger Animation
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
